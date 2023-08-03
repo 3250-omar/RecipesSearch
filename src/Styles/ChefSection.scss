@@ -1,0 +1,50 @@
+.section.top-chefs{
+    display: flex;
+    flex-direction: column;
+    h1{
+        margin-bottom: 2em;
+        font-size: 3em;
+        color: var(--text-color);
+    }
+    .chefs{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+        .chefCard{
+            display: flex;
+            height: 120px;
+            gap: 1em;
+            img{
+                width: 120px;
+                height: 100%;
+                border-radius: 10px;
+                }
+            .amount-culsines{
+                font-weight: bold;
+                color: var(--text-color);
+            }
+            .info{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                p{
+                    margin-bottom: 0;
+
+                }
+            }
+            .chefname{
+                font-weight: bold;
+                font-size: 1.2em;
+                color: var(--text-color);
+            }
+            .social-media{
+                a{
+                    margin-right: .5em;
+                }
+            }
+        }
+    }
+}

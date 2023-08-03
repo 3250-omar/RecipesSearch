@@ -1,0 +1,17 @@
+.section.qoute{
+    display: block;
+    .qoute{
+        font-size: 1.3em;
+        line-height: 1.25;
+    }
+    svg{
+        font-size: 1.6em;
+        color: var(--primary-color);
+        margin-right: .5em;
+        
+    }
+    .author{
+        color: var(--text-light);
+        text-align: right;
+    }
+}

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Agdasima&family=Bai+Jamjuree:wght@500&family=Barlow+Semi+Condensed&family=Belanosima&family=Hanken+Grotesk:wght@300&family=Indie+Flower&family=Inter:wght@400;700;800&family=Montserrat&family=Outfit&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;700&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@500&family=Space+Grotesk:wght@500&family=Ubuntu:wght@400;500&family=Vina+Sans&display=swap');
+:root{
+    --background-color:#fff;
+    --background-light:#fff;
+    --shadow-color:rgba(0,0,0,0.2);
+    --primary-color:rgb(255,0,86);
+    --text-color:#0A0A0A;
+    --text-light:#575757;
+    --font-size:16px;
+    --animation-speed:1;
+}
+@function getAnimationDuration ($duration:number){
+    @return calc($duration*var(--animation-speed))
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: var(--font-size);
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+}
+a{
+    text-decoration: none;
+
+}
+.container{
+    padding-inline: 25vw;
+}
+.main{
+    padding-block: 3vw
+}
+.center{
+    min-height: 80vh;
+    margin-top: 20vh;
+}
+.options-container{
+    display: flex;
+    flex-direction: column;
+    .options{
+        background-color: var(--background-light);
+        display: flex;
+        gap: 1em;
+        margin-bottom: .5em;
+        .option-item{
+            width: 3.5em;
+            cursor: pointer;
+            height: 3.5em;
+            box-shadow: 0 3px 10px var(--shadow-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            &.light{
+                background-color:white;
+            }
+            &.dark{
+                background-color: rgb(29,29,29);
+            }
+            .check{
+                padding: 10px;
+                border-radius: 50%;
+                background-color: var(--primary-color);
+                color: white;
+               
+            }
+        }
+    }
+    h1{
+        font-size: 1.75em;
+        color: var(--text-color);
+    }
+    .options{
+    margin-top: .75em;
+    border-left: .5em solid var(--primary-color);
+    padding: 10px;
+    background-color: var(--background-light);
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px var(--shadow-color);
+}
+.btn{
+    padding: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    gap: .5em;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 8px;
+}
+}
+
+/*Footer Styling Starts*/
+.footer{
+    display: flex;
+    background-color: #0f0f0f;
+    color: white;
+    position: static;
+    justify-content: space-between;
+    bottom: 0;
+    padding-inline: 12vw;
+    padding-block: 3rem;
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .about{
+        & p:nth-child(2){
+            width: 500px;
+        }
+    }
+}
+
+
+@import '_Animations.scss';
+@import 'NAvbar';
+@import 'herosection';
+@import 'skillSection';
+@import 'qoute';
+@import 'ChefSection';
+@import '_Recipes.scss';
+@media only screen and (max-width:1280px) {
+    .container{
+        padding-inline: 22vw;
+    }
+} 
+@media only screen and (max-width:1050px) {
+    .container{
+        padding-inline: 12vw;
+    }
+    .footer{
+        padding-inline: 5vw;
+        flex-direction: column;
+    }
+  
+}
+@media only screen and (max-width:768px) {
+    .navbar{
+        .nav-links{
+            display: none;
+        }
+        .side-bar{
+            display: block;
+        }
+    }
+    .section {
+        .col{
+            width: 100%;
+            padding: 0 !important;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+    }
+    .improve{
+        display: inline-block;
+        margin: .75em;
+        
+    }
+    .section.improve-skill-section .btn{
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .chefCard{
+        box-shadow: 0 3px 10px var(--shadow-color);
+        padding-right: 2em;
+        border-radius: 10px;
+    }
+    .container{
+        padding-inline: 6vw;
+    }
+}
+@media only screen and (max-width:480px) {
+    .container{
+        padding-inline: 3vw;
+
+    }
+    .footer{
+        .about{
+            & p:nth-child(2){
+                width: 300px;
+            }
+        }
+        padding-inline:3vw;
+        gap:2rem;
+
+    }
+    .section{
+        padding-top: 3em;
+
+    }
+   
+}

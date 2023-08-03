@@ -1,0 +1,79 @@
+.section{
+    margin-top:5vw ;
+    margin-bottom:3vw ;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    .col{
+        width: 50%
+    }
+    .btn{
+        border: none;
+        outline: none;
+        background-color: var(--primary-color);
+        color: white;
+        padding: .75em 1em;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        border-radius: 3px;
+        font-weight: bold;
+        box-shadow: 0 3px 6px var(--shadow-color);
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0 1px 3px var(--shadow-color);
+        }
+    }
+    .customimages{
+        background-color: var(--text-color);
+        height: 0;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        transform: scale(0);
+        animation: getAnimationDuration(.3s) Pop ease-in-out forwards;
+        @for $i from 1 through 9 {
+            &:nth-child(#{$i}){
+                animation-delay: #{$i * .15}s;
+            }
+        }
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .title{
+        color: var(--text-color);
+        font-size: 2.5em;
+        margin-bottom: .25em;
+    }
+    p{
+        color: var(--text-light);
+        font-size: 1em;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        margin-bottom: 1.25em;
+    }
+}
+img {
+    object-fit: cover;
+}
+.section.hero {
+    .galary{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1.75vw;
+    }
+
+}
+.typography{
+    padding-right: 1em;
+}
+.page-margin-top{
+    margin-top: 3rem;
+}
